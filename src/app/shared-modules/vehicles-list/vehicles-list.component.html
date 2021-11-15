@@ -2,6 +2,6 @@
 <div>
     <app-vehicles-item
         *ngFor="let productElem of listProducts; let i = index"
-        [vehicleId]=>"productElem.Id"
+        [vehicleId]="productElem.Id">
     </app-vehicles-item>
 </div>

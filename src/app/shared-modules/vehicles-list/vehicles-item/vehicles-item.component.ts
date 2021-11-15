@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Vehicle } from 'src/app/models/vehicle.model';
+import { CatalogoService } from 'src/app/services/catalogo.service';
 
 @Component({
   selector: 'app-vehicles-item',
@@ -7,13 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class VehiclesItemComponent implements OnInit {
 
-  vehicleName:string="";
-  vehicleDesc:string="";
-  @Input() vehicleId:number | undefined ;
+  vehicle : Vehicle|any;
+  @Input() vehicleId:number=0 ;
 
-  constructor() { }
+  constructor(private catalogoService: CatalogoService) { }
 
   ngOnInit(): void {
+    this.vehicle = this.catalogoService.getVehicle(this.vehicleId);
   }
 
 }
