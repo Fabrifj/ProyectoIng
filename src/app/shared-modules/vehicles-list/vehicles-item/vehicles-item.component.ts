@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-vehicles-item',
@@ -9,7 +9,7 @@ export class VehiclesItemComponent implements OnInit {
 
   vehicleName:string="";
   vehicleDesc:string="";
-  vehicleId:number=0;
+  @Input() vehicleId:number | undefined ;
 
   constructor() { }
 

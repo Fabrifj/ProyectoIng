@@ -1,1 +1,7 @@
-<p>vehicles-list works!</p>
+
+<div>
+    <app-vehicles-item
+        *ngFor="let productElem of listProducts; let i = index"
+        [vehicleId]=>"productElem.Id"
+    </app-vehicles-item>
+</div>
