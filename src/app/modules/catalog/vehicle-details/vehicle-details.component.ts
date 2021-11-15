@@ -8,9 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VehicleDetailsComponent implements OnInit {
 
-  vehicleName:string="";
-  vehicleDesc:string="";
-  vehicleId:number=0;
+
+  vehicleId:number = 0;
 
   constructor(private router : ActivatedRoute) { 
     this.router.params.subscribe( params => {
